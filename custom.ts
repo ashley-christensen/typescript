@@ -1,15 +1,25 @@
 class Point { // CLASS
-	//define the shape of object
-	x: number;
-	y: number;
+
+ constructor(private x?: number, private y?: number) {
+ }
+
 	draw() {
 		console.log('X: ' + this.x + 'Y: ' + this.y);
 	}
 
-	getDistance(another: Point) {}
+ get X() {
+  return this.x
+ }
+
+ set X(value) {
+  if (value < 0) {
+   throw new Error('value cannot be less than 0.')
+  }
+  this.x = value;
+ }
 }
 
-let point = new Point();//point = OBJECT (instance of class)
-point.x = 1;
-point.y = 2;
-point.draw();
+let point = new Point(1, 2);//point = OBJECT (instance of class) 
+point.draw()
+let x = point.X;
+point.X = 10;
