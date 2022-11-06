@@ -22,4 +22,4 @@ class Point { // CLASS
 let point = new Point(1, 2);//point = OBJECT (instance of class) 
 point.draw()
 let x = point.x;
-point.x = 10; // instead of point.setX(10)
+point.x = 10; // cleaner than of point.setX(10)
